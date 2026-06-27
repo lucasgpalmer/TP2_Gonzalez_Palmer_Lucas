@@ -1,0 +1,48 @@
+    1  sudo fdisk -l
+    2  exit
+    3  pwd
+    4  sudo fdisk -l
+    5  fdisk
+    6  sudo fdisk /dev/sdd
+    7  free
+    8  free -h
+    9  sudo mkswap /dev/sdd1
+   10  free -h
+   11  sudo swapon /dev/sdd1
+   12  free -h
+   13  swapon -s
+   14  cat /proc/swaps
+   15  sudo fdisk /dev/sdc
+   16  sudo wipefs -a /dev/sdd2
+   17  sudo wipefs -a /dev/sdd3
+   18  sudo wipefs -a /dev/sdd5
+   19  sudo wipefs -a /dev/sdd6
+   20  sudo wipefs -a /dev/sdc1
+   21  sudo wipefs -a /dev/sdc2
+   22  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   23  sudo pvs
+   24  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   25  sudo vgs
+   26  sudo pvs
+   27  sudo vgcreate vg_web /dev/sdc2
+   28  sudo pvs
+   29  sudo lvcreate -L 1G vg_web -n lv_web1
+   30  sudo lvcreate -L 512M vg_web -n lv_web2
+   31  sudo lvcreate -L 512M vg_web -n lv_web3
+   32  sudo lvs
+   33  sudo pvs
+   34  sudo fdisk -l
+   35  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   36  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   37  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   38  exit
+   39  git clone https://github.com/lucasgpalmer/TP2_Gonzalez_Palmer_Lucas.git
+   40  ls -l
+   41  cd TP2_Gonzalez_Palmer_Lucas/
+   42  PWD
+   43  pwd
+   44  ls -l
+   45  sudo pvs > pvs.txt
+   46  sudo vgs > vgs.txt
+   47  sudo lvs > lvs.txt
+   48  history > historial_lvm.txt
